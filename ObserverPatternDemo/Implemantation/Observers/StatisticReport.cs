@@ -19,6 +19,14 @@ namespace ObserverPatternDemo.Implemantation.Observers
                 throw new ArgumentNullException($"{nameof(info)} can't be equal to null");
 
             statisticInfo.Add(info);
+
+            Console.WriteLine("Statistic Report:");
+            foreach (var statisticInfo in GetStatisticReport())
+            {
+                Console.WriteLine(statisticInfo);
+            }
+            Console.WriteLine();
+            
         }
 
         public string[] GetStatisticReport()

@@ -1,4 +1,5 @@
-﻿using ObserverPatternDemo.Implemantation.Observable;
+﻿using System;
+using ObserverPatternDemo.Implemantation.Observable;
 
 namespace ObserverPatternDemo.Implemantation.Observers
 {
@@ -9,6 +10,10 @@ namespace ObserverPatternDemo.Implemantation.Observers
         public void Update(IObservable<WeatherInfo> sender, WeatherInfo info)
         {
             currentConditions = info;
+
+            Console.WriteLine("Current Conditions Report:");
+            Console.WriteLine(this.ToString());
+            Console.WriteLine();
         }
 
         public override string ToString()
